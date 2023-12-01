@@ -23,7 +23,7 @@
             "password": {
                "from_secret": "docker_password"
             },
-            "repo": "rspamd/rbldnsd",
+            "repo": "nerfd/rbldnsd",
             "tags": [
                "latest-amd64"
             ],
@@ -67,7 +67,7 @@
             "password": {
                "from_secret": "docker_password"
             },
-            "repo": "rspamd/rbldnsd",
+            "repo": "nerfd/rbldnsd",
             "tags": [
                "latest-arm64"
             ],
@@ -106,8 +106,11 @@
                "linux/amd64",
                "linux/arm64"
             ],
-            "target": "rspamd/rbldnsd:latest",
-            "template": "rspamd/rbldnsd:latest-ARCH",
+            "tags": [
+               "${DRONE_SEMVER_SHORT}-${DRONE_SEMVER_BUILD}"
+            ],
+            "target": "nerfd/rbldnsd:latest",
+            "template": "nerfd/rbldnsd:latest-ARCH",
             "username": {
                "from_secret": "docker_username"
             }

@@ -1,4 +1,4 @@
-local IMAGE_NAME = 'rspamd/rbldnsd';
+local IMAGE_NAME = 'nerfd/rbldnsd';
 local DEBIAN_VERSION = 'bookworm';
 
 local docker_defaults = {
@@ -79,6 +79,9 @@ local make_multiarch_prod_image = {
         platforms: [
           'linux/amd64',
           'linux/arm64',
+        ],
+        tags: [
+          '${DRONE_SEMVER_SHORT}-${DRONE_SEMVER_BUILD}'
         ],
       } + docker_defaults,
     },
