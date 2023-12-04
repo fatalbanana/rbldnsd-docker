@@ -1,7 +1,7 @@
 ARG DEBIAN_RELEASE=bookworm
 ARG RBLDNSD_VERSION=1.0.1
 
-FROM nerfd/rbldnsd:build AS build
+FROM rspamd/rbldnsd:build AS build
 
 ARG RBLDNSD_VERSION
 ENV DEBEMAIL=support@rspamd.com
