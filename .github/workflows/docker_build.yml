@@ -50,7 +50,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           build-args: |
-            RBLDNSD_VERSION=pkg${{ env.VERSION_FULL }}
+            RBLDNSD_VERSION=${{ env.VERSION_FULL }}
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
