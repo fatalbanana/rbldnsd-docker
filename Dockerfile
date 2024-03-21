@@ -13,7 +13,7 @@ RUN	apt-get update -y && \
 	apt-get install -y git debhelper && \
 	mkdir /src && \
 	cd /src && \
-	git clone -b ${RBLDNSD_VERSION} https://github.com/rspamd/rbldnsd.git && \
+	git clone -b ${RBLDNSD_VERSION} https://github.com/fatalbanana/rbldnsd.git && \
 	cd rbldnsd && \
 	git apply /patches/*.diff && \
 	sed -i s/\(.*\)/\(${RBLDNSD_VERSION}\)/ debian/changelog && \
